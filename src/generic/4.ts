@@ -8,7 +8,11 @@ class Component<T> {
   }
 }
 
-class Page extends Component<{title: string}> {
+interface Title {
+  title: string,
+}
+
+class Page extends Component<Title> {
   pageInfo () {
     console.log(this.props.title);
   }
